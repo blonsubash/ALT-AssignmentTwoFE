@@ -63,6 +63,64 @@ function validateRegisterForms(e) {
   checkPassword();
   return false;
 }
+// For Login
+function passwordVisibility() {
+  var imgShow = document.getElementById("passVisibility");
+  var imgShow1 = document.getElementById("passVisibilityOpen");
+  var char = document.getElementById("passwordBox");
+  if (char.type === "text") {
+    imgShow1.style.display = "block";
+    imgShow.style.display = "none";
+    char.type = "password";
+  } else {
+    imgShow1.style.display = "none";
+    imgShow.style.display = "block";
+    char.type = "text";
+  }
+}
+function passwordVisibilityOpen() {
+  var imgShow = document.getElementById("passVisibility");
+  var imgShow1 = document.getElementById("passVisibilityOpen");
+  var char = document.getElementById("passwordBox");
+  if (char.type === "password") {
+    imgShow1.style.display = "none";
+    imgShow.style.display = "block";
+    char.type = "text";
+  } else {
+    imgShow1.style.display = "block";
+    imgShow.style.display = "none";
+    char.type = "password";
+  }
+}
+// For Register
+function passwordVisibilityRegister() {
+  var imgShow = document.getElementById("passVisibilityRegister");
+  var imgShow1 = document.getElementById("passVisibilityOpenRegister");
+  var char = document.getElementById("passwordBox");
+  if (char.type === "text") {
+    imgShow1.style.display = "block";
+    imgShow.style.display = "none";
+    char.type = "password";
+  } else {
+    imgShow1.style.display = "none";
+    imgShow.style.display = "block";
+    char.type = "text";
+  }
+}
+function passwordVisibilityOpenRegister() {
+  var imgShow = document.getElementById("passVisibilityRegister");
+  var imgShow1 = document.getElementById("passVisibilityOpenRegister");
+  var char = document.getElementById("passwordBox");
+  if (char.type === "password") {
+    imgShow1.style.display = "none";
+    imgShow.style.display = "block";
+    char.type = "text";
+  } else {
+    imgShow1.style.display = "block";
+    imgShow.style.display = "none";
+    char.type = "password";
+  }
+}
 
 if (document.getElementById("loginBtn")) {
   document
@@ -73,4 +131,26 @@ if (document.getElementById("registerBtn")) {
   document
     .getElementById("registerBtn")
     .addEventListener("click", validateRegisterForms);
+}
+if (document.getElementById("passVisibility")) {
+  document
+    .getElementById("passVisibility")
+    .addEventListener("click", passwordVisibility);
+}
+if (document.getElementById("passVisibilityOpen")) {
+  // document.getElementById("passVisibilityOpen").style.visibility = "hidden";
+  document
+    .getElementById("passVisibilityOpen")
+    .addEventListener("click", passwordVisibilityOpen);
+}
+if (document.getElementById("passVisibilityRegister")) {
+  document
+    .getElementById("passVisibilityRegister")
+    .addEventListener("click", passwordVisibilityRegister);
+}
+if (document.getElementById("passVisibilityOpenRegister")) {
+  // document.getElementById("passVisibilityOpen").style.visibility = "hidden";
+  document
+    .getElementById("passVisibilityOpenRegister")
+    .addEventListener("click", passwordVisibilityOpenRegister);
 }

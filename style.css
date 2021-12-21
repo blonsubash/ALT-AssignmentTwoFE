@@ -33,6 +33,43 @@ a {
   margin-bottom: 40px;
 }
 
+#passVisibility {
+  position: absolute;
+  top: 425px;
+  right: 780px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+#passVisibilityOpen {
+  position: absolute;
+  top: 425px;
+  right: 780px;
+  width: 16px;
+  cursor: pointer;
+}
+#passVisibilityRegister {
+  position: absolute;
+  top: 438px;
+  right: 780px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+#passVisibilityOpenRegister {
+  position: absolute;
+  top: 438px;
+  right: 780px;
+  width: 16px;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
 .links {
   margin-left: 250px;
   text-decoration: none;
