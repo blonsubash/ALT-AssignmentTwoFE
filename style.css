@@ -1,0 +1,201 @@
+body {
+  background-color: #44bcee;
+}
+.responsive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-family: "Roboto";
+  word-spacing: 3px;
+  color: #787d7a;
+  font-size: 50px;
+}
+a {
+  letter-spacing: 1px;
+}
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin-top: 50px;
+  height: 550px;
+  border-radius: 8px;
+  padding: 20px;
+}
+.container img {
+  width: 150px;
+
+  margin-bottom: 40px;
+}
+
+.links {
+  margin-left: 250px;
+  text-decoration: none;
+  margin-top: -10px;
+  font-family: "Raleway";
+  color: #787d7a;
+  font-size: 12px;
+}
+.link {
+  margin-left: 350px;
+  text-decoration: none;
+  margin-top: -10px;
+  font-family: "Raleway";
+  color: #787d7a;
+  font-size: 10px;
+}
+
+.container a:hover {
+  color: black;
+}
+span {
+  font-family: "Raleway";
+
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: red;
+}
+.fields {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  height: 35px;
+  width: 370px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  padding-left: 10px;
+}
+input.fields,
+textarea {
+  background: #e6e6e6;
+}
+
+.button {
+  border-radius: 8px;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 35px;
+  width: 380px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: #44bcee;
+}
+.button:active {
+  box-shadow: 0 5px #15abea;
+  transform: translateY(4px);
+}
+
+/* Mobile View */ /*Login and Register*/
+@media screen and (max-width: 480px) {
+  .container {
+    width: 300px;
+  }
+
+  .fields {
+    width: 310px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .button {
+    width: 320px;
+  }
+
+  .link {
+    margin-left: 280px;
+  }
+
+  .links {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main {
+    width: 350px;
+  }
+  table {
+    width: 350px;
+  }
+}
+
+/* Table Content */
+
+table {
+  font-family: "Raleway";
+  border-collapse: collapse;
+  width: 1200px;
+  height: auto;
+  background-color: white;
+}
+td,
+th {
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(1) {
+  background-color: black;
+  color: white;
+  height: 80px;
+}
+tbody > tr > :nth-child(1) {
+  text-align: left;
+}
+tr:nth-child(2) {
+  height: 60px;
+}
+tr:nth-child(3) {
+  height: 60px;
+  background-color: #44bcee;
+}
+tr:nth-child(4) {
+  height: 60px;
+}
+tr:nth-child(5) {
+  height: 60px;
+  background-color: #44bcee;
+}
+tr:nth-child(6) {
+  height: 60px;
+}
+tr:nth-child(7) {
+  height: 60px;
+  background-color: #44bcee;
+}
+tr:nth-child(8) {
+  height: 60px;
+}
+/* Home Page */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+
+  margin: auto;
+  /* margin-left: 400px; */
+  /* margin-right:400px; */
+}
+.home-body {
+  background-color: #e6e6e6;
+}
+#homepage-heading {
+  text-align: center;
+  color: #44bcee;
+}
