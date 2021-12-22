@@ -171,7 +171,9 @@ textarea {
 }
 
 /* Table Content */
-
+.spinner-border {
+  margin-top: 200px;
+}
 table {
   font-family: "Raleway";
   border-collapse: collapse;
@@ -183,8 +185,19 @@ td,
 th {
   text-align: center;
   padding: 8px;
+  border: 1px solid #44bcee;
 }
-
+th {
+  background-color: #44bcee;
+}
+.productImage {
+  width: 80px;
+  /* height: 80px; */
+}
+tr {
+  border: 1px solid #44bcee;
+}
+/* 
 tr:nth-child(1) {
   background-color: black;
   color: white;
@@ -216,7 +229,7 @@ tr:nth-child(7) {
 }
 tr:nth-child(8) {
   height: 60px;
-}
+} */
 /* Home Page */
 .main {
   display: flex;
