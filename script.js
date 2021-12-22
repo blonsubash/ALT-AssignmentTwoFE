@@ -18,8 +18,34 @@ function validateLoginForm(e) {
     document.getElementById("errorPasswordLogin").innerHTML =
       "Password is empty";
     document.getElementById("passwordBox").style.borderColor = "red";
+  } else if (
+    document.loginForm.username.value === "aricalotIntern" &&
+    document.loginForm.password.value === "TEST@123"
+  ) {
+    window.location.href = "homepage.html";
+    console.log("Correct");
+  } else {
+    function checkUserAndPass() {
+      var username = document.loginForm.username.value;
+      var password = document.loginForm.password.value;
+      var validUsername = "aricalotIntern";
+      var validPassword = "TEST@123";
+      if (username !== validUsername) {
+        document.getElementById("errorUsernameLogin").innerHTML =
+          "Username is incorrect";
+        document.getElementById("usernameBox").style.borderColor = "red";
+      }
+      if (password !== validPassword) {
+        document.getElementById("errorPasswordLogin").innerHTML =
+          "Password is incorrect";
+        document.getElementById("passwordBox").style.borderColor = "red";
+      }
+      // if (username !== validUsername && password !== validPassword) {
+      //   console.log("Incorrect username and password");
+      // }
+    }
+    checkUserAndPass();
   }
-
   return false;
 }
 
@@ -61,6 +87,13 @@ function validateRegisterForms(e) {
     }
   }
   checkPassword();
+  if (
+    document.registerForm.username.value !== "" &&
+    document.registerForm.password.value !== "" &&
+    document.registerForm.email.value !== ""
+  ) {
+    window.location.href = "loginpage.html";
+  }
   return false;
 }
 // For Login
