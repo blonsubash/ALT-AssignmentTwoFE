@@ -23,7 +23,7 @@ function validateLoginForm(e) {
     document.loginForm.username.value === "aricalotIntern" &&
     document.loginForm.password.value === "TEST@123"
   ) {
-    window.location.href = "homepage.html";
+    window.location.href = "homepage1.html";
     document.loginForm.username.value = "";
     document.loginForm.password.value = "";
     document.getElementById("errorUsernameLogin").innerHTML = "";

@@ -1,6 +1,6 @@
 var productLists = [];
 var spinnerWrapper = document.querySelector(".spinner-border");
-var table = document.getElementById("productListTable");
+var container = document.getElementById("productContainer");
 
 axios.get("https://fakestoreapi.com/products").then((response) => {
   myProductList(response.data);
@@ -10,14 +10,19 @@ function myProductList(data) {
   for (var i = 0; i < data.length; i++) {
     productLists.push(data[i]);
 
-    var row = `<tr>
-                 <td><a href="#"><img class="productImage" src="${data[i].image}"/></a></td>   
-                 <td>${data[i].title}</td>
-                  <td>${data[i].description}</td>
-                   <td>${data[i].category}</td>
-                  <td>${data[i].price}</td>
-                </tr>`;
-    table.innerHTML += row;
+    var row = `<div class="productItem col-md-3" ><a href='http://127.0.0.1:5500/productDetails.html?id=${
+      data[i].id
+    }'><div id="imageContainer"><img class="productImage" src="${
+      data[i].image
+    }"/></div>
+                <p id="titleContainer">${
+                  data[i].title.length > 17
+                    ? ` ${data[i].title.substring(0, 17)}...`
+                    : data[i].title
+                }</p>
+                  <p id="priceContainer"> $ ${data[i].price}</p></a>
+                  </div>`;
+    container.innerHTML += row;
   }
   console.log("Data", productLists);
 }
@@ -25,7 +30,7 @@ function myProductList(data) {
 function selectCategory() {
   if (this.value == "mensclothing") {
     productLists = [];
-    table.innerHTML = "";
+    container.innerHTML = "";
     spinnerWrapper.style.display = "block";
 
     axios
@@ -37,7 +42,7 @@ function selectCategory() {
   }
   if (this.value == "jewerly") {
     productLists = [];
-    table.innerHTML = "";
+    container.innerHTML = "";
     spinnerWrapper.style.display = "block";
     axios
       .get(`https://fakestoreapi.com/products/category/jewelery`)
@@ -48,7 +53,7 @@ function selectCategory() {
   }
   if (this.value == "electronics") {
     productLists = [];
-    table.innerHTML = "";
+    container.innerHTML = "";
     spinnerWrapper.style.display = "block";
     axios
       .get(`https://fakestoreapi.com/products/category/electronics`)
@@ -59,7 +64,7 @@ function selectCategory() {
   }
   if (this.value == "womensclothing") {
     productLists = [];
-    table.innerHTML = "";
+    container.innerHTML = "";
     spinnerWrapper.style.display = "block";
     axios
       .get(`https://fakestoreapi.com/products/category/women's clothing`)
@@ -70,7 +75,7 @@ function selectCategory() {
   }
   if (this.value == "allcategories") {
     productLists = [];
-    table.innerHTML = "";
+    container.innerHTML = "";
     spinnerWrapper.style.display = "block";
     axios.get(`https://fakestoreapi.com/products`).then((response) => {
       myProductList(response.data);
