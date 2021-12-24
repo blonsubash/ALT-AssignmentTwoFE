@@ -6,6 +6,9 @@ axios.get("https://fakestoreapi.com/products").then((response) => {
   myProductList(response.data);
   spinnerWrapper.style.display = "none";
 });
+function addNewProduct() {
+  window.location.href = "addNewProduct.html";
+}
 function myProductList(data) {
   for (var i = 0; i < data.length; i++) {
     productLists.push(data[i]);
@@ -84,6 +87,10 @@ function selectCategory() {
   }
 }
 document.getElementById("selection").addEventListener("change", selectCategory);
+
+document
+  .getElementById("addNewProductBtn")
+  .addEventListener("click", addNewProduct);
 
 // function searchMyProductLists(searchString) {
 //   let searchResult = productLists.filter(function (item, index) {

@@ -18,8 +18,13 @@ function itemDetails(data) {
                 <div class="itemallDetails"><p id="titleDetails">${data.title}</p>
                 <p id="descriptionDetails"> ${data.description}</p>
                 <p id="priceDetails"> $ ${data.price}</p>
+               <div id="formContainer" <form>
+                <input id="addItem"value="0">
+                 <img id="minusSign" src="./Images/minusSign.png">
+                <img id="plusSign" src="./Images/plusSign.png">
+                </form></div>
                 <button id="cartBtn"> Add to cart</button>
-                  </div>`;
+                </div>`;
   container.innerHTML += row;
 
   console.log("Data", productLists);

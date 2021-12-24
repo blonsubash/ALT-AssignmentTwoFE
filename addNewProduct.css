@@ -1,0 +1,54 @@
+#homepage-heading {
+  margin-top: 50px;
+
+  color: #44bcee;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1400px;
+  margin: auto;
+}
+.addNewItem {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  padding-left: 10px;
+  text-align: center;
+}
+#selection {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  text-align: center;
+}
+#addNewItemBtn {
+  border-radius: 8px;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}

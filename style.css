@@ -31,7 +31,7 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: 1400px;
   margin-top: 20px;
   height: auto;
@@ -310,6 +310,22 @@ tr:nth-child(8) {
 }
 #homepage-heading {
   margin-top: 20px;
-  text-align: center;
+  margin-right: auto;
   color: #44bcee;
+}
+#addNewProductBtn {
+  border-radius: 8px;
+  border: 0;
+  margin-left: 930px;
+  margin-top: -54px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 280px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
 }
