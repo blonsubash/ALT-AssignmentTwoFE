@@ -21,17 +21,22 @@
         <h1 id="homepage-heading">Add New Product</h1>
         <form name="addNewProductForm" class="addNewItemForm">
             <input type="text" class="addNewItem" id="newItemName" placeholder="Product Name"><br>
+            <span id="newNameError"></span>
             <input type="number"  class="addNewItem" id="newItemPrice" placeholder="Price"><br>
+            <span id="newPriceError"></span>
             <input type="text"  class="addNewItem" id ="newItemDescription" class="addNewItem" placeholder="Description of Product"><br>
+            <span id="newDescriptionError"></span>
     
             <input type="text" class="addNewItem" id="newItemImage"placeholder="Select Image (Paste the link of the image)"><br>
+            <span id="newImageError"></span>
                 <select id="selection" name="selectCategory">
                     <option value="selectCategory">Select Category</option>
-                    <option value="mensclothing">Men's Clothing</option>
+                    <option value="men'sclothing">Men's Clothing</option>
                     <option value="jewerly">Jewelery</option>
                     <option value="electronics">Electronics</option>
-                    <option value="womensclothing">Women's Clothing</option>
+                    <option value="women'sclothing">Women's Clothing</option>
                 </select><br>
+                <span id="newSelectionError"></span>
             <button id="addNewItemBtn">Add Item</button>
         </form>
         </div>

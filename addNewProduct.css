@@ -6,9 +6,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1400px;
+  justify-content: left;
+  align-items: left;
+  width: 450px;
   margin: auto;
 }
 .addNewItem {
@@ -51,4 +51,11 @@
   cursor: pointer;
   letter-spacing: 2px;
   background-color: #44bcee;
+}
+span {
+  font-family: "Raleway";
+  margin: auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: red;
 }
