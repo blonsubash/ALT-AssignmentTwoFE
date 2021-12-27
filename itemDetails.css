@@ -2,12 +2,29 @@ p {
   font-family: "Raleway";
 }
 
+.deleteConfirmation {
+  border: 1px solid red;
+}
+.deleteConfirmation button {
+  border-radius: 8px;
+  border: 0;
+
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}
+
 #itemDetails {
   width: 100%;
-  /* border: 1px solid red; */
+
   margin-top: 50px;
   height: auto;
   display: block;
+
   /* margin: auto; */
 }
 
@@ -35,6 +52,7 @@ p {
   font-size: 35px;
   letter-spacing: 1px;
   color: #44bcee;
+  z-index: -1;
 }
 
 #descriptionDetails {
@@ -98,6 +116,37 @@ p {
   margin-left: 80px;
   margin-top: -60px;
 }
+
+#optionBtn {
+  height: 25px;
+
+  float: right;
+  margin-top: 35px;
+  cursor: pointer;
+}
+#optionSection {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  float: right;
+  margin-top: 60px;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  font-family: "Raleway";
+  display: none;
+  z-index: 1;
+}
+#optionSection button {
+  width: 150px;
+  height: 40px;
+  letter-spacing: 2px;
+  background-color: white;
+  border: none;
+}
+#optionSection button:hover {
+  background-color: #44bcee;
+}
+
+/* // Similar Products// */
 
 .container {
   background-color: white;

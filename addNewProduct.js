@@ -1,3 +1,32 @@
+var productID =
+  window.location.search.split("=")[
+    window.location.search.split("=").length - 1
+  ];
+if (productID) {
+  axios
+    .get(`https://fakestoreapi.com/products/${productID}`)
+    .then((response) => {
+      if (response.status === 200) {
+        console.log(response.data);
+        editSelectedProduct(response.data);
+      }
+    });
+}
+
+function editSelectedProduct(data) {
+  document.getElementById("homepage-heading").innerHTML = "Update Product";
+
+  document.getElementById("newItemName").value = data.title;
+  document.getElementById("newItemPrice").value = data.price;
+  document.getElementById("newItemDescription").value = data.description;
+  document.getElementById("newItemImage").value = data.image;
+  document.getElementById("selection").value = data.category;
+  document.getElementById("addNewItemBtn").innerHTML = "Update Item";
+  document
+    .getElementById("addNewItemBtn")
+    .addEventListener("click", addNewProduct);
+}
+
 function addNewProduct(e) {
   e.preventDefault();
   var newProductName = document.getElementById("newItemName").value;
@@ -69,7 +98,13 @@ function addNewProduct(e) {
     document.getElementById("newItemImage").style.borderColor = "#e6e6e6";
     document.getElementById("newItemImage").style.borderColor = "#e6e6e6";
     document.getElementById("dataUploadedPopup").style.display = "block";
-    document.getElementById("addNewItemBtn").innerHTML = "Add Item";
+    if (productID) {
+      document.getElementById("addNewItemBtn").innerHTML = "Update Item";
+      document.getElementById("successPopup").innerHTML =
+        "The Product has been updated";
+    } else {
+      document.getElementById("addNewItemBtn").innerHTML = "Add Item";
+    }
     document.getElementById("confirmBtn").style.cursor = "pointer";
   }
 

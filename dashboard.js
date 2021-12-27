@@ -27,7 +27,6 @@ function myProductList(data) {
                   </div>`;
     container.innerHTML += row;
   }
-  console.log("Data", productLists);
 }
 
 function selectCategory() {

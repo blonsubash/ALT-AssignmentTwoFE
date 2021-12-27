@@ -7,7 +7,6 @@ var productID =
   window.location.search.split("=")[
     window.location.search.split("=").length - 1
   ];
-console.log("Product Id", productID);
 
 axios.get(`https://fakestoreapi.com/products/${productID}`).then((response) => {
   if (response.status === 200) {
@@ -20,10 +19,14 @@ axios.get(`https://fakestoreapi.com/products/${productID}`).then((response) => {
 });
 
 function itemDetails(data) {
-  console.log("Selected Data", data);
-
   var row = `<div class="itemDetails" ><img class="itemDetailsImg" src="${data.image}"/></div>
-                <div class="itemallDetails"><p id="titleDetails">${data.title}</p>
+                <div class="itemallDetails"> <img id="optionBtn" onclick="optionBtn()" src="./Images/optionBtn.png">
+                <div id="optionSection">
+                 <button id="updateBtn" onclick="updateItem()"> Update Item</button>
+                 <button id="deleteBtn"> Delete Item</button>
+                </div>
+                <p id="titleDetails">${data.title}</p>
+               
                 <p id="descriptionDetails"> ${data.description}</p>
                 <p id="priceDetails"> $ ${data.price}</p>
                <div id="formContainer" <form>
@@ -35,6 +38,25 @@ function itemDetails(data) {
                 </div>`;
   container.innerHTML += row;
 }
+function optionBtn() {
+  console.log("style", document.getElementById("optionSection").style);
+
+  switch (document.getElementById("optionSection").style.display) {
+    case "":
+      document.getElementById("optionSection").style.display = "block";
+    case "none":
+      document.getElementById("optionSection").style.display = "block";
+      break;
+    case "block":
+      document.getElementById("optionSection").style.display = "none";
+      break;
+    default:
+      document.getElementById("optionSection").style.display = "none";
+  }
+}
+function updateItem() {
+  window.location.href = ` addNewProduct.html?id=${productID}`;
+}
 
 function fetchSimilarCategoryData(categoryName) {
   axios
@@ -44,8 +66,6 @@ function fetchSimilarCategoryData(categoryName) {
     });
 }
 function similarProductsSection(data) {
-  console.log("data", data);
-
   data
     .filter((item) => item.id != productID)
     .map((prouctItem) => {
@@ -66,20 +86,4 @@ function similarProductsSection(data) {
                   </div>`;
       return (similarContainer.innerHTML += section);
     });
-
-  // for (var i = 0; i < data.length; i++) {
-  //   console.log(productID);
-  //   console.log(data[i].id);
-  //   if (productID == data[i].id) {
-  //     console.log("same id", data[i]);
-  //     filterID = productID;
-  //   } else {
-  //     console.log("other id", data[i]);
-  //   }
-  // }
 }
-
-// function productDetails(detailData) {
-//   productLists.push(detailData);
-//   console.log(productLists);
-// }
