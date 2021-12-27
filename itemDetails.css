@@ -3,12 +3,22 @@ p {
 }
 
 .deleteConfirmation {
-  border: 1px solid red;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  width: 500px;
+  margin-left: 700px;
+  display: none;
+}
+.deleteConfirmation p {
+  margin-top: 10px;
+  font-size: 25px;
 }
 .deleteConfirmation button {
   border-radius: 8px;
   border: 0;
-
+  margin-right: 80px;
+  margin-bottom: 10px;
   font-family: "Raleway";
   color: white;
   font-weight: bold;
@@ -21,7 +31,7 @@ p {
 #itemDetails {
   width: 100%;
 
-  margin-top: 50px;
+  margin-top: 20px;
   height: auto;
   display: block;
 

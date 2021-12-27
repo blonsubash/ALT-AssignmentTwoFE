@@ -23,7 +23,7 @@ function itemDetails(data) {
                 <div class="itemallDetails"> <img id="optionBtn" onclick="optionBtn()" src="./Images/optionBtn.png">
                 <div id="optionSection">
                  <button id="updateBtn" onclick="updateItem()"> Update Item</button>
-                 <button id="deleteBtn"> Delete Item</button>
+                 <button id="deleteBtn" onclick="deleteItem()"> Delete Item</button>
                 </div>
                 <p id="titleDetails">${data.title}</p>
                
@@ -56,6 +56,10 @@ function optionBtn() {
 }
 function updateItem() {
   window.location.href = ` addNewProduct.html?id=${productID}`;
+}
+function deleteItem() {
+  document.getElementById("deleteConfirmation").style.display = "block";
+  document.getElementById("optionSection").style.display = "none";
 }
 
 function fetchSimilarCategoryData(categoryName) {

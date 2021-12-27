@@ -15,7 +15,6 @@ if (productID) {
 
 function editSelectedProduct(data) {
   document.getElementById("homepage-heading").innerHTML = "Update Product";
-
   document.getElementById("newItemName").value = data.title;
   document.getElementById("newItemPrice").value = data.price;
   document.getElementById("newItemDescription").value = data.description;
@@ -140,7 +139,15 @@ function addNewProduct(e) {
     checkProductCategoryResult
   ) {
     handleProcessingTime();
-
+    if (editSelectedProduct) {
+      axios.put(`https://fakestoreapi.com/products/${productID}`, {
+        title: `${newProductName}`,
+        price: `${newProductPrice}`,
+        description: `${newProductDescription}`,
+        image: `${newProductImage}`,
+        category: `${newProductCategory}`,
+      });
+    }
     axios
       .post(
         "https://fakestoreapi.com/products",
