@@ -39,8 +39,6 @@ function itemDetails(data) {
   container.innerHTML += row;
 }
 function optionBtn() {
-  console.log("style", document.getElementById("optionSection").style);
-
   switch (document.getElementById("optionSection").style.display) {
     case "":
       document.getElementById("optionSection").style.display = "block";
@@ -60,6 +58,35 @@ function updateItem() {
 function deleteItem() {
   document.getElementById("deleteConfirmation").style.display = "block";
   document.getElementById("optionSection").style.display = "none";
+  document
+    .getElementById("yesBtn")
+    .addEventListener("click", deleteSuccessfully);
+  document
+    .getElementById("noBtn")
+    .addEventListener("click", cancelDeleteProduct);
+}
+function deleteSuccessfully() {
+  document.getElementById("confirmationSpan").innerHTML =
+    "Deleting, Please Wait...";
+  document.getElementById("yesBtn").style.cursor = "not-allowed";
+  document.getElementById("noBtn").style.cursor = "not-allowed";
+
+  axios
+    .delete(`https://fakestoreapi.com/products/${productID}`)
+    .then((response) => {
+      console.log("Data Deleted", response.data);
+
+      document.getElementById("deleteConfirmation").style.display = "none";
+      document.getElementById("deleteSuccess").style.display = "block";
+      document
+        .getElementById("confirmBtn")
+        .addEventListener("click", function () {
+          window.location.href = "homepage1.html";
+        });
+    });
+}
+function cancelDeleteProduct() {
+  document.getElementById("deleteConfirmation").style.display = "none";
 }
 
 function fetchSimilarCategoryData(categoryName) {

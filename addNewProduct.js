@@ -139,35 +139,36 @@ function addNewProduct(e) {
     checkProductCategoryResult
   ) {
     handleProcessingTime();
-    if (editSelectedProduct) {
-      axios.put(`https://fakestoreapi.com/products/${productID}`, {
-        title: `${newProductName}`,
-        price: `${newProductPrice}`,
-        description: `${newProductDescription}`,
-        image: `${newProductImage}`,
-        category: `${newProductCategory}`,
-      });
-    }
-    axios
-      .post(
-        "https://fakestoreapi.com/products",
+    var formData = {};
+    formData.title = `${newProductName}`;
+    formData.price = `${newProductPrice}`;
+    formData.description = `${newProductDescription}`;
+    formData.image = `${newProductImage}`;
+    formData.category = `${newProductCategory}`;
 
-        {
-          title: `${newProductName}`,
-          price: `${newProductPrice}`,
-          description: `${newProductDescription}`,
-          image: `${newProductImage}`,
-          category: `${newProductCategory}`,
-        }
-      )
-      .then((res) => {
-        if (res.status === 200) {
-          console.log("New Item Added Successfully");
-          handleSuccess();
-          handlePopupClose();
-        }
-      })
-      .catch((err) => console.error(err));
+    if (productID) {
+      axios
+        .put(`https://fakestoreapi.com/products/${productID}`, formData)
+        .then((res) => {
+          if (res.status === 200) {
+            console.log("Data edited succssfully");
+            handleSuccess();
+            handlePopupClose();
+          }
+        })
+        .catch((err) => console.error(err));
+    } else {
+      axios
+        .post("https://fakestoreapi.com/products", formData)
+        .then((res) => {
+          if (res.status === 200) {
+            console.log("New Item Added Successfully");
+            handleSuccess();
+            handlePopupClose();
+          }
+        })
+        .catch((err) => console.error(err));
+    }
   }
 }
 

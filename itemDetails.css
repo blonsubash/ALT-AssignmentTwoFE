@@ -9,7 +9,10 @@ p {
   width: 500px;
   margin-left: 700px;
   display: none;
+  position: fixed;
+  background-color: white;
 }
+
 .deleteConfirmation p {
   margin-top: 10px;
   font-size: 25px;
@@ -26,6 +29,34 @@ p {
   cursor: pointer;
   letter-spacing: 2px;
   background-color: #44bcee;
+}
+.deleteSuccess {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  width: 500px;
+  margin-left: 700px;
+  display: none;
+  position: fixed;
+  background-color: white;
+}
+.deleteSuccess button {
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  height: 35px;
+  width: 70px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}
+.deleteSuccess p {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 #itemDetails {
