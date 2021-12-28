@@ -15,6 +15,104 @@ h1 {
 a {
   letter-spacing: 1px;
 }
+.navBar {
+  background-color: #44bcee;
+  display: flex;
+  height: 80px;
+}
+.navBarContent {
+  display: flex;
+
+  width: 1400px;
+}
+#mainLogo {
+  width: 100px;
+  padding: 10px;
+  margin-left: 80px;
+}
+#navBarCart {
+  width: 30px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+#navBarProfile {
+  width: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#logoutBtn {
+  cursor: pointer;
+}
+#logoutBtn:hover {
+  background-color: #44bcee;
+}
+
+.navBar p {
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  color: white;
+}
+.navBar p:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.socialMediaIcons {
+  width: 35px;
+  display: flex;
+  margin-left: 150px;
+  cursor: pointer;
+}
+#fbIcon {
+  margin-left: 10px;
+}
+#instaIcon {
+  margin-left: 10px;
+}
+#tiktokIcon {
+  margin-left: 10px;
+}
+#selection {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+  margin-left: 30px;
+  /* margin-bottom: 10px; */
+  height: 35px;
+  width: 200px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  text-align: center;
+}
+.hide {
+  display: none;
+  margin-top: 60px;
+  margin-left: -70px;
+  font-size: 10px;
+}
+.comingSoon:hover + .hide {
+  display: block;
+  color: white;
+}
+
+#logoutPopup {
+  background-color: white;
+  width: 85px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 30px;
+  text-align: center;
+  font-family: "Raleway";
+  padding-top: 3px;
+  margin-left: 1230px;
+  margin-top: -15px;
+  position: fixed;
+  display: none;
+}
+
 .container {
   background-color: white;
   display: flex;
@@ -184,19 +282,7 @@ textarea {
   box-shadow: 0 5px #15abea;
   transform: translateY(4px);
 }
-#selection {
-  border-radius: 8px;
-  border: 1px solid #e6e6e6;
-  margin-top: 10px;
-  margin-left: 1000px;
-  margin-bottom: 10px;
-  height: 35px;
-  width: 200px;
-  font-family: "Raleway";
-  padding: 0px;
-  outline: none;
-  text-align: center;
-}
+
 /* Mobile View */ /*Login and Register*/
 @media screen and (max-width: 480px) {
   .container {
@@ -300,6 +386,7 @@ tr:nth-child(8) {
   align-items: center;
   width: 1400px;
   margin: auto;
+  margin-top: 20px;
 
   /* margin-left: 400px; */
   /* margin-right:400px; */
@@ -313,8 +400,8 @@ tr:nth-child(8) {
   margin-right: auto;
   color: #44bcee;
 }
-#addNewProductBtn {
-  border-radius: 8px;
+
+/* border-radius: 8px;
   border: 0;
   margin-left: 930px;
   margin-top: -54px;
@@ -327,5 +414,4 @@ tr:nth-child(8) {
   font-size: 20px;
   cursor: pointer;
   letter-spacing: 2px;
-  background-color: #44bcee;
-}
+  background-color: #44bcee; */

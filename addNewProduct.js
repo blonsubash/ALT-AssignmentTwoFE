@@ -74,7 +74,7 @@ function addNewProduct(e) {
     if (newProductCategory === "selectCategory") {
       document.getElementById("newSelectionError").innerHTML =
         "Please select a category";
-      document.getElementById("newItemImage").style.borderColor = "red";
+      document.getElementById("selection").style.borderColor = "red";
     } else {
       return true;
     }
@@ -95,7 +95,7 @@ function addNewProduct(e) {
     document.getElementById("newItemPrice").style.borderColor = "#e6e6e6";
     document.getElementById("newItemDescription").style.borderColor = "#e6e6e6";
     document.getElementById("newItemImage").style.borderColor = "#e6e6e6";
-    document.getElementById("newItemImage").style.borderColor = "#e6e6e6";
+    document.getElementById("selection").style.borderColor = "#e6e6e6";
     document.getElementById("dataUploadedPopup").style.display = "block";
     if (productID) {
       document.getElementById("addNewItemBtn").innerHTML = "Update Item";

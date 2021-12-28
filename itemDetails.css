@@ -20,7 +20,6 @@ p {
 .deleteConfirmation button {
   border-radius: 8px;
   border: 0;
-  margin-right: 80px;
   margin-bottom: 10px;
   font-family: "Raleway";
   color: white;
@@ -29,6 +28,27 @@ p {
   cursor: pointer;
   letter-spacing: 2px;
   background-color: #44bcee;
+  width: 60px;
+}
+#yesBtn {
+  float: right;
+  margin-right: 10px;
+  border: solid #44bcee;
+}
+/* #yesBtn:hover {
+  background-color: white;
+  border: solid #44bcee;
+  color: #44bcee;
+} */
+#noBtn {
+  margin-left: 300px;
+  background-color: white;
+  border: solid #44bcee;
+  color: #44bcee;
+}
+#noBtn:hover {
+  background-color: #44bcee;
+  color: white;
 }
 .deleteSuccess {
   border-radius: 8px;

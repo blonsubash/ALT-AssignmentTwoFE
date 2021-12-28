@@ -26,6 +26,9 @@
   padding-left: 10px;
   text-align: center;
 }
+#newItemDescription {
+  height: 150px;
+}
 #selection {
   border-radius: 8px;
   border: 1px solid #e6e6e6;
@@ -52,6 +55,10 @@
   cursor: pointer;
   letter-spacing: 2px;
   background-color: #44bcee;
+}
+#addNewItemBtn:active {
+  box-shadow: 0 5px #15abea;
+  transform: translateY(4px);
 }
 span {
   font-family: "Raleway";

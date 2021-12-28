@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./addNewProduct.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FakeStore.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- CSS only -->
@@ -27,16 +28,12 @@
         </div>
         <h1 id="homepage-heading">Add New Product</h1>
         <form name="addNewProductForm" class="addNewItemForm">
-            <input type="text" class="addNewItem" id="newItemName" placeholder="Product Name"><br>
+          
+            <textarea type="text" class="addNewItem" id="newItemName" placeholder="Product Name"></textarea><br>
             <span id="newNameError"></span>
             <input type="number"  class="addNewItem" id="newItemPrice" placeholder="Price"><br>
             <span id="newPriceError"></span>
-            <input type="text"  class="addNewItem" id ="newItemDescription" class="addNewItem" placeholder="Description of Product"><br>
-            <span id="newDescriptionError"></span>
-    
-            <input type="text" class="addNewItem" id="newItemImage"placeholder="Select Image (Paste the link of the image)"><br>
-            <span id="newImageError"></span>
-                <select id="selection" name="selectCategory">
+              <select id="selection" name="selectCategory">
                     <option id="selectCategory" value="selectCategory">Select Category</option>
                     <option value="men'sclothing">Men's Clothing</option>
                     <option value="jewerly">Jewelery</option>
@@ -44,6 +41,12 @@
                     <option value="women'sclothing">Women's Clothing</option>
                 </select><br>
                 <span id="newSelectionError"></span>
+                <textarea type="text" class="addNewItem" id="newItemDescription" class="addNewItem"
+                    placeholder="Description of Product"></textarea><br>
+                <span id="newDescriptionError"></span>
+                
+                <input type="text" class="addNewItem" id="newItemImage" placeholder="Select Image (Paste the link of the image)"><br>
+                <span id="newImageError"></span>
             <button id="addNewItemBtn">Add Item</button>
         </form>
         </div>

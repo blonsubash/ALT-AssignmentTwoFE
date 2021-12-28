@@ -85,11 +85,45 @@ function selectCategory() {
     });
   }
 }
+
+function logoutPopup() {
+  switch (document.getElementById("logoutPopup").style.display) {
+    case "":
+      document.getElementById("logoutPopup").style.display = "block";
+    case "none":
+      document.getElementById("logoutPopup").style.display = "block";
+      break;
+    case "block":
+      document.getElementById("logoutPopup").style.display = "none";
+      break;
+    default:
+      document.getElementById("logoutPopup").style.display = "none";
+  }
+  document.getElementById("logoutBtn").addEventListener("click", function () {
+    window.location.href = "loginpage.html";
+  });
+}
 document.getElementById("selection").addEventListener("change", selectCategory);
 
 document
   .getElementById("addNewProductBtn")
   .addEventListener("click", addNewProduct);
+
+document.getElementById("navBarProfile").addEventListener("click", logoutPopup);
+
+document.getElementById("homeLink").addEventListener("click", function () {
+  window.location.href = "homepage1.html";
+});
+
+document.getElementById("fbIcon").addEventListener("click", function () {
+  window.open("https://www.facebook.com/", "_blank");
+});
+document.getElementById("instaIcon").addEventListener("click", function () {
+  window.open("https://www.instagram.com/", "_blank");
+});
+document.getElementById("tiktokIcon").addEventListener("click", function () {
+  window.open("https://www.tiktok.com/", "_blank");
+});
 
 // function searchMyProductLists(searchString) {
 //   let searchResult = productLists.filter(function (item, index) {

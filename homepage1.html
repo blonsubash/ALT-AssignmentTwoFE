@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./commonStyle.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FakeStore.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- CSS only -->
@@ -21,20 +22,41 @@
 
     
    
-    
+    <div class="navBar">
+        
+        <a href="#" >
+            <img src="./Images/FakeStore.svg" alt="logo" id="mainLogo"></a>
+           <div class="navBarContent">
+            <p id="homeLink">Home</p> 
+           <p class="comingSoon">About</p>
+           <span class="hide">Coming Soon</span>
+            
+            
+            <p id="addNewProductBtn">Add new product</p>
+            <p class="comingSoon">Latest</p>
+            <span class="hide">Coming Soon</span>
+            <p class="comingSoon">Blog</p>
+            <span class="hide">Coming Soon</span>
+           <img src="./Images/cart.svg" alt="cart" id="navBarCart">
+           <img src="./Images/profile.svg" alt="cart" id="navBarProfile">
+        <select name="Select" id="selection">
+        
+            <option value="allcategories">All Categories</option>
+            <option value="mensclothing">Men's Clothing</option>
+            <option value="jewerly">Jewelery</option>
+            <option value="electronics">Electronics</option>
+            <option value="womensclothing">Women's Clothing</option>
+        </select></div>
+           <div class="socialMediaIcons">
+        <img src="./Images/fblogo.svg" alt="fblogo" id="fbIcon" >
+           <img src="./Images/insta.svg" alt="instalogo" id="instaIcon" >
+           <img src="./Images/tiktok1.svg" id="tiktokIcon" ></div>
+    </div>
+    <div id="logoutPopup">
+        <p id="logoutBtn">Logout</p>
+    </div>
         <div class="main">
-                <h1 id="homepage-heading">MY PRODUCT LISTS</h1>
-                <button id="addNewProductBtn">Add new product</button>
-            <select name="Select" id="selection">
-              
-                <option value="allcategories">All Categories</option>
-                <option value="mensclothing">Men's Clothing</option>
-                <option value="jewerly">Jewelery</option>
-                <option value="electronics">Electronics</option>
-                <option value="womensclothing">Women's Clothing</option>
-            </select>
-
-            <div id="productContainer" class="row">
+                       <div id="productContainer" class="row">
        
             </div>
              <div class="spinner-border text-info" style="width: 100px; height: 100px; margin-top: 300px;" role="status">
