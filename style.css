@@ -23,8 +23,12 @@ a {
 .navBarContent {
   display: flex;
 
-  width: 1400px;
+  width: 1150px;
 }
+.navBarContent > .desktopView {
+  display: flex;
+}
+
 #mainLogo {
   width: 100px;
   padding: 10px;
@@ -282,6 +286,12 @@ textarea {
   box-shadow: 0 5px #15abea;
   transform: translateY(4px);
 }
+#mobOptionsIcon {
+  display: none;
+}
+#mobViewNavBar {
+  display: none;
+}
 
 /* Mobile View */ /*Login and Register*/
 @media screen and (max-width: 480px) {
@@ -307,6 +317,67 @@ textarea {
 
   .links {
     margin-left: 150px;
+  }
+  #mobOptionsIcon {
+    display: block;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  #mainLogo {
+    margin-top: -50px;
+    margin-left: 200px;
+  }
+  #mobViewNavBar {
+    display: none;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 480px;
+    height: auto;
+    text-align: center;
+  }
+  #mobViewNavBar hr {
+    color: #44bcee;
+    height: 3px;
+  }
+  #mobViewNavBar p {
+    margin-top: 15px;
+    font-family: "Raleway";
+    color: black;
+  }
+  #selection {
+    position: absolute;
+    width: 220px;
+    margin-top: 90px;
+    margin-left: -170px;
+  }
+
+  .main {
+    width: 480px !important;
+  }
+  #productContainer {
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  .productItem {
+    width: 310px !important;
+  }
+  .navBar {
+    width: 480px;
+  }
+  .navBarContent {
+    display: none;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  .socialMediaIconsMob {
+    width: 35px;
+    display: flex;
+    margin-left: 180px;
+    margin-bottom: 10px;
   }
 }
 

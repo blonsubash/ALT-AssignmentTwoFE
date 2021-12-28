@@ -124,6 +124,37 @@ document.getElementById("instaIcon").addEventListener("click", function () {
 document.getElementById("tiktokIcon").addEventListener("click", function () {
   window.open("https://www.tiktok.com/", "_blank");
 });
+//Mobile VIew//
+
+document.getElementById("mobOptionsIcon").addEventListener("click", mobNavBar);
+function mobNavBar() {
+  switch (document.getElementById("mobViewNavBar").style.display) {
+    case "":
+      document.getElementById("mobViewNavBar").style.display = "block";
+    case "none":
+      document.getElementById("mobViewNavBar").style.display = "block";
+      break;
+    case "block":
+      document.getElementById("mobViewNavBar").style.display = "none";
+      break;
+    default:
+      document.getElementById("mobViewNavBar").style.display = "none";
+  }
+}
+
+document.getElementById("mobHome").addEventListener("click", function () {
+  window.location.href = "homepage1.html";
+});
+
+document
+  .getElementById("mobAddNewProduct")
+  .addEventListener("click", function () {
+    window.location.href = "addNewProduct.html";
+  });
+
+document.getElementById("mobLogout").addEventListener("click", function () {
+  window.location.href = "loginpage.html";
+});
 
 // function searchMyProductLists(searchString) {
 //   let searchResult = productLists.filter(function (item, index) {

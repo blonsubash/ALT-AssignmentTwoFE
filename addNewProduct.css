@@ -100,3 +100,12 @@ span {
   background-color: #44bcee;
   margin-top: -15px;
 }
+
+/* MObile View */
+
+.main {
+  margin-left: 50px;
+}
+#homepage-heading {
+  margin-left: 70px;
+}
