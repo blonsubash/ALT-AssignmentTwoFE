@@ -128,6 +128,7 @@ a {
   height: 550px;
   border-radius: 8px;
   padding: 20px;
+  position: relative;
 }
 #productContainer {
   display: flex;
@@ -194,31 +195,31 @@ a {
 
 #passVisibility {
   position: absolute;
-  top: 425px;
-  right: 780px;
+  top: 370px;
+  right: 45px;
   width: 16px;
   cursor: pointer;
   display: none;
 }
 #passVisibilityOpen {
   position: absolute;
-  top: 425px;
-  right: 780px;
+  top: 370px;
+  right: 45px;
   width: 16px;
   cursor: pointer;
 }
 #passVisibilityRegister {
   position: absolute;
-  top: 438px;
-  right: 780px;
+  top: 380px;
+  right: 45px;
   width: 16px;
   cursor: pointer;
   display: none;
 }
 #passVisibilityOpenRegister {
   position: absolute;
-  top: 438px;
-  right: 780px;
+  top: 380px;
+  right: 45px;
   width: 16px;
   cursor: pointer;
 }
@@ -291,103 +292,6 @@ textarea {
 }
 #mobViewNavBar {
   display: none;
-}
-
-/* Mobile View */ /*Login and Register*/
-@media screen and (max-width: 480px) {
-  .container {
-    width: 300px;
-  }
-
-  .fields {
-    width: 310px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .button {
-    width: 320px;
-  }
-
-  .link {
-    margin-left: 280px;
-  }
-
-  .links {
-    margin-left: 150px;
-  }
-  #mobOptionsIcon {
-    display: block;
-    width: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-  #mainLogo {
-    margin-top: -50px;
-    margin-left: 200px;
-  }
-  #mobViewNavBar {
-    display: none;
-    position: fixed;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 480px;
-    height: auto;
-    text-align: center;
-  }
-  #mobViewNavBar hr {
-    color: #44bcee;
-    height: 3px;
-  }
-  #mobViewNavBar p {
-    margin-top: 15px;
-    font-family: "Raleway";
-    color: black;
-  }
-  #selection {
-    position: absolute;
-    width: 220px;
-    margin-top: 90px;
-    margin-left: -170px;
-  }
-
-  .main {
-    width: 480px !important;
-  }
-  #productContainer {
-    margin-top: 40px;
-    width: 100%;
-    justify-content: center;
-  }
-  .productItem {
-    width: 310px !important;
-  }
-  .navBar {
-    width: 480px;
-  }
-  .navBarContent {
-    display: none;
-  }
-  .socialMediaIcons {
-    display: none;
-  }
-  .socialMediaIconsMob {
-    width: 35px;
-    display: flex;
-    margin-left: 180px;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .main {
-    width: 350px;
-  }
-  table {
-    width: 350px;
-  }
 }
 
 /* Table Content */
@@ -486,3 +390,228 @@ tr:nth-child(8) {
   cursor: pointer;
   letter-spacing: 2px;
   background-color: #44bcee; */
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 1200px;
+    display: block;
+  }
+  .navBar {
+    width: 1200px;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBarContent {
+    display: flex;
+    width: 750px;
+  }
+  .navBar p {
+    margin-left: 30px;
+  }
+  #selection {
+    margin-left: 0px;
+  }
+  #navBarCart {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+  .socialMediaIcons {
+    margin-left: 10px;
+  }
+  #productContainer {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 130px;
+  }
+  #logoutPopup {
+    position: absolute;
+    left: 0px;
+    margin-left: 705px;
+    margin-top: -15px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .main {
+    width: 1023px;
+  }
+  .navBar {
+    width: 1023px;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBarContent {
+    display: flex;
+    width: 780px;
+  }
+  .navBar p {
+    margin-left: 40px;
+  }
+  #navBarCart {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+
+  #selection {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 100px;
+    margin-left: 410px;
+  }
+  #productContainer {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 220px;
+  }
+  .socialMediaIcons {
+    margin-left: 0px;
+  }
+
+  #logoutPopup {
+    position: absolute;
+    left: 0px;
+    margin-left: 750px;
+    margin-top: -15px;
+  }
+}
+
+/* Mobile View max 767px */
+@media screen and (max-width: 767px) {
+  .main {
+    width: 767px;
+  }
+  .navBar {
+    width: 767px;
+  }
+  .navBarContent {
+    width: 767px;
+    display: flex;
+  }
+
+  #productContainer {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .productItem {
+    width: 280px !important;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBar p {
+    margin-left: 25px;
+  }
+  #navBarCart {
+    margin-left: 25px;
+  }
+  #selection {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    left: 0px;
+    right: 0px;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  #logoutPopup {
+    margin-left: 650px;
+  }
+}
+
+/* Mobile View max 480px */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 300px;
+  }
+
+  .fields {
+    width: 310px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .button {
+    width: 320px;
+  }
+
+  .link {
+    margin-left: 280px;
+  }
+
+  .links {
+    margin-left: 150px;
+  }
+  #mobOptionsIcon {
+    display: block;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  #mainLogo {
+    margin-top: -50px;
+    margin-left: 200px;
+  }
+  #mobViewNavBar {
+    display: none;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 480px;
+    height: auto;
+    text-align: center;
+  }
+  #mobViewNavBar hr {
+    color: #44bcee;
+    height: 3px;
+  }
+  #mobViewNavBar p {
+    margin-top: 15px;
+    font-family: "Raleway";
+    color: black;
+  }
+  #selection {
+    position: absolute;
+    width: 220px;
+    margin-top: 90px;
+    left: 0px;
+    margin-left: 130px;
+  }
+
+  .main {
+    width: 480px;
+  }
+  #productContainer {
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  .productItem {
+    width: 310px !important;
+  }
+  .navBar {
+    width: 480px;
+  }
+  .navBarContent {
+    display: none;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  .socialMediaIconsMob {
+    width: 35px;
+    display: flex;
+    margin-left: 180px;
+    margin-bottom: 10px;
+  }
+}

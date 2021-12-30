@@ -13,7 +13,7 @@ function myProductList(data) {
   for (var i = 0; i < data.length; i++) {
     productLists.push(data[i]);
 
-    var row = `<div class="productItem col-md-3" ><a href='http://127.0.0.1:5500/productDetails.html?id=${
+    var row = `<div class="productItem col-md-3 col-sm-12" ><a href='http://127.0.0.1:5500/productDetails.html?id=${
       data[i].id
     }'><div id="imageContainer"><img class="productImage" src="${
       data[i].image

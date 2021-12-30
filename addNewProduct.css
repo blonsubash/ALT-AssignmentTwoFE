@@ -100,12 +100,36 @@ span {
   background-color: #44bcee;
   margin-top: -15px;
 }
-
-/* MObile View */
-
-.main {
-  margin-left: 50px;
+@media screen and (max-width: 1200px) {
+  .main {
+    margin-left: 450px;
+  }
+  #homepage-heading {
+    margin-left: 40px;
+  }
 }
-#homepage-heading {
-  margin-left: 70px;
+@media screen and (max-width: 1023px) {
+  .main {
+    margin-left: 320px;
+  }
+  #homepage-heading {
+    margin-left: 40px;
+  }
+}
+/* MObile View */
+@media screen and (max-width: 767px) {
+  .main {
+    margin-left: 190px;
+  }
+  #homepage-heading {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    margin-left: 50px;
+  }
+  #homepage-heading {
+    margin-left: 70px;
+  }
 }
