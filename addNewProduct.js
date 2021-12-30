@@ -2,15 +2,44 @@ var productID =
   window.location.search.split("=")[
     window.location.search.split("=").length - 1
   ];
-if (productID) {
+
+function handleProcessingTime(loading, module = "") {
+  if (loading) {
+    document.getElementById("newItemName").setAttribute("disabled", true);
+    document.getElementById("addNewItemBtn").setAttribute("disabled", true);
+    document.getElementById("newItemPrice").setAttribute("disabled", true);
+    document
+      .getElementById("newItemDescription")
+      .setAttribute("disabled", true);
+    document.getElementById("newItemImage").setAttribute("disabled", true);
+    document.getElementById("selection").setAttribute("disabled", true);
+    document.getElementById("addNewItemBtn").innerHTML =
+      "Processing Please Wait...";
+  } else {
+    document.getElementById("newItemName").removeAttribute("disabled");
+    document.getElementById("addNewItemBtn").removeAttribute("disabled");
+    document.getElementById("newItemPrice").removeAttribute("disabled");
+    document.getElementById("newItemDescription").removeAttribute("disabled");
+    document.getElementById("newItemImage").removeAttribute("disabled");
+    document.getElementById("selection").removeAttribute("disabled");
+    document.getElementById("addNewItemBtn").innerHTML = `${module} Item`;
+  }
+}
+
+function updateProduct(productID) {
+  handleProcessingTime(true);
   axios
     .get(`https://fakestoreapi.com/products/${productID}`)
     .then((response) => {
       if (response.status === 200) {
         console.log(response.data);
         editSelectedProduct(response.data);
+        handleProcessingTime(false, "Update");
       }
     });
+}
+if (productID) {
+  updateProduct(productID);
 }
 
 function editSelectedProduct(data) {
@@ -80,7 +109,7 @@ function addNewProduct(e) {
     }
   }
 
-  function handleSuccess() {
+  function handleSuccess(module) {
     document.getElementById("newItemName").value = "";
     document.getElementById("newItemPrice").value = "";
     document.getElementById("newItemDescription").value = "";
@@ -98,13 +127,11 @@ function addNewProduct(e) {
     document.getElementById("selection").style.borderColor = "#e6e6e6";
     document.getElementById("dataUploadedPopup").style.display = "block";
     if (productID) {
-      document.getElementById("addNewItemBtn").innerHTML = "Update Item";
       document.getElementById("successPopup").innerHTML =
         "The Product has been updated";
-    } else {
-      document.getElementById("addNewItemBtn").innerHTML = "Add Item";
     }
     document.getElementById("confirmBtn").style.cursor = "pointer";
+    handleProcessingTime(false, module);
   }
 
   function handlePopupClose() {
@@ -115,16 +142,7 @@ function addNewProduct(e) {
         document.getElementById("dataUploadedPopup").style.display = "none";
       });
   }
-  function handleProcessingTime() {
-    document.getElementById("newItemName").style.cursor = "not-allowed";
-    document.getElementById("addNewItemBtn").style.cursor = "not-allowed";
-    document.getElementById("newItemPrice").style.cursor = "not-allowed";
-    document.getElementById("newItemDescription").style.cursor = "not-allowed";
-    document.getElementById("newItemImage").style.cursor = "not-allowed";
-    document.getElementById("selection").style.cursor = "not-allowed";
-    document.getElementById("addNewItemBtn").innerHTML =
-      "Processing Please Wait...";
-  }
+
   var checkProductNameResult = checkProductName();
   var checkProductPriceResult = checkProductPrice();
   var checkProductDescriptionResult = checkProductDescription();
@@ -138,7 +156,7 @@ function addNewProduct(e) {
     checkProductImageResult &&
     checkProductCategoryResult
   ) {
-    handleProcessingTime();
+    handleProcessingTime(true, "Add");
     var formData = {};
     formData.title = `${newProductName}`;
     formData.price = `${newProductPrice}`;
@@ -152,7 +170,7 @@ function addNewProduct(e) {
         .then((res) => {
           if (res.status === 200) {
             console.log("Data edited succssfully");
-            handleSuccess();
+            handleSuccess("Update");
             handlePopupClose();
           }
         })
@@ -163,7 +181,7 @@ function addNewProduct(e) {
         .then((res) => {
           if (res.status === 200) {
             console.log("New Item Added Successfully");
-            handleSuccess();
+            handleSuccess("Add");
             handlePopupClose();
           }
         })

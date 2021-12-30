@@ -1,6 +1,12 @@
 p {
   font-family: "Raleway";
 }
+#loadingSpinner {
+  width: 100px;
+  height: 100px;
+  margin-top: 300px;
+  margin-left: 900px;
+}
 
 .deleteConfirmation {
   border-radius: 8px;
@@ -298,6 +304,12 @@ p {
   .main {
     width: 1200px;
   }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 600px;
+  }
   #itemDetails {
     width: 1200px;
     display: block;
@@ -333,6 +345,12 @@ p {
 @media screen and (max-width: 1023px) {
   .main {
     width: 1023px;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 450px;
   }
   #itemDetails {
     width: 1023px;
@@ -371,6 +389,12 @@ p {
   .main {
     width: 767px;
     display: block;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 350px;
   }
   #itemDetails {
     width: 767px;
