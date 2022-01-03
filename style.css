@@ -198,7 +198,7 @@ a {
   margin-bottom: 40px;
 }
 
-#passVisibility {
+#openEyeIcon {
   position: absolute;
   top: 370px;
   right: 45px;
@@ -206,13 +206,14 @@ a {
   cursor: pointer;
   display: none;
 }
-#passVisibilityOpen {
+#closeEyeIcon {
   position: absolute;
   top: 370px;
   right: 45px;
   width: 16px;
   cursor: pointer;
 }
+
 #passVisibilityRegister {
   position: absolute;
   top: 380px;
