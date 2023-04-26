@@ -15,6 +15,113 @@ h1 {
 a {
   letter-spacing: 1px;
 }
+#loadingSpinner {
+  width: 100px;
+  height: 100px;
+  margin-top: 300px;
+}
+.navBar {
+  background-color: #44bcee;
+  display: flex;
+  height: 80px;
+}
+.navBarContent {
+  display: flex;
+
+  width: 1150px;
+}
+.navBarContent > .desktopView {
+  display: flex;
+}
+
+#mainLogo {
+  width: 100px;
+  padding: 10px;
+  margin-left: 80px;
+}
+#navBarCart {
+  width: 30px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+#navBarProfile {
+  width: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#logoutBtn {
+  cursor: pointer;
+}
+#logoutBtn:hover {
+  background-color: #44bcee;
+}
+
+.navBar p {
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  color: white;
+}
+.navBar p:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.socialMediaIcons {
+  width: 35px;
+  display: flex;
+  margin-left: 150px;
+  cursor: pointer;
+}
+#fbIcon {
+  margin-left: 10px;
+}
+#instaIcon {
+  margin-left: 10px;
+}
+#tiktokIcon {
+  margin-left: 10px;
+}
+#selection {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+  margin-left: 30px;
+  /* margin-bottom: 10px; */
+  height: 35px;
+  width: 200px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  text-align: center;
+}
+.hide {
+  display: none;
+  margin-top: 60px;
+  margin-left: -70px;
+  font-size: 10px;
+}
+.comingSoon:hover + .hide {
+  display: block;
+  color: white;
+}
+
+#logoutPopup {
+  background-color: white;
+  width: 85px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 30px;
+  text-align: center;
+  font-family: "Raleway";
+  padding-top: 3px;
+  margin-left: 1230px;
+  margin-top: -15px;
+  position: fixed;
+  display: none;
+}
+
 .container {
   background-color: white;
   display: flex;
@@ -26,11 +133,101 @@ a {
   height: 550px;
   border-radius: 8px;
   padding: 20px;
+  position: relative;
 }
+#productContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 1400px;
+  margin-top: 20px;
+  height: auto;
+}
+.productItem {
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 240px !important;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 330px;
+  padding: 5px;
+}
+
+.productItem a {
+  text-decoration: none;
+  text-align: center;
+}
+.productItem a:hover {
+  opacity: 0.5;
+}
+#titleContainer {
+  text-align: center;
+  /* margin-left: 25px; */
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-family: "Raleway";
+  font-weight: 600;
+  color: #44bcee;
+}
+#priceContainer {
+  margin-top: 0px;
+  color: grey;
+}
+#imageContainer {
+  text-align: center;
+  height: 200px;
+}
+
+#imageContainer img {
+  margin-top: 25px;
+  width: 90;
+  height: 200px;
+  /* margin-left: 20px; */
+}
+
+/* .titleContainer{
+
+} */
+
 .container img {
   width: 150px;
 
   margin-bottom: 40px;
+}
+
+#openEyeIcon {
+  position: absolute;
+  top: 370px;
+  right: 45px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+#closeEyeIcon {
+  position: absolute;
+  top: 370px;
+  right: 45px;
+  width: 16px;
+  cursor: pointer;
+}
+
+#passVisibilityRegister {
+  position: absolute;
+  top: 380px;
+  right: 45px;
+  width: 16px;
+  cursor: pointer;
+  display: none;
+}
+#passVisibilityOpenRegister {
+  position: absolute;
+  top: 380px;
+  right: 45px;
+  width: 16px;
+  cursor: pointer;
 }
 
 .links {
@@ -96,41 +293,11 @@ textarea {
   box-shadow: 0 5px #15abea;
   transform: translateY(4px);
 }
-
-/* Mobile View */ /*Login and Register*/
-@media screen and (max-width: 480px) {
-  .container {
-    width: 300px;
-  }
-
-  .fields {
-    width: 310px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  .button {
-    width: 320px;
-  }
-
-  .link {
-    margin-left: 280px;
-  }
-
-  .links {
-    margin-left: 150px;
-  }
+#mobOptionsIcon {
+  display: none;
 }
-
-@media screen and (max-width: 1300px) {
-  .main {
-    width: 350px;
-  }
-  table {
-    width: 350px;
-  }
+#mobViewNavBar {
+  display: none;
 }
 
 /* Table Content */
@@ -146,8 +313,20 @@ td,
 th {
   text-align: center;
   padding: 8px;
+  border: 1px solid #44bcee;
 }
-
+th {
+  background-color: #44bcee;
+}
+.productImage {
+  width: 150px;
+  /* height: 150px; */
+  /* height: 80px; */
+}
+tr {
+  border: 1px solid #44bcee;
+}
+/* 
 tr:nth-child(1) {
   background-color: black;
   color: white;
@@ -179,23 +358,284 @@ tr:nth-child(7) {
 }
 tr:nth-child(8) {
   height: 60px;
-}
+} */
 /* Home Page */
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1200px;
-
+  width: 1400px;
   margin: auto;
+  margin-top: 20px;
+
   /* margin-left: 400px; */
   /* margin-right:400px; */
 }
 .home-body {
   background-color: #e6e6e6;
+  margin-top: 20px;
 }
 #homepage-heading {
-  text-align: center;
+  margin-top: 20px;
+  margin-right: auto;
   color: #44bcee;
+}
+
+/* border-radius: 8px;
+  border: 0;
+  margin-left: 930px;
+  margin-top: -54px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 280px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee; */
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 1200px;
+    display: block;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 600px;
+  }
+  .navBar {
+    width: 1200px;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBarContent {
+    display: flex;
+    width: 750px;
+  }
+  .navBar p {
+    margin-left: 30px;
+  }
+  #selection {
+    margin-left: 0px;
+  }
+  #navBarCart {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+  .socialMediaIcons {
+    margin-left: 10px;
+  }
+  #productContainer {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 130px;
+  }
+  #logoutPopup {
+    position: absolute;
+    left: 0px;
+    margin-left: 705px;
+    margin-top: -15px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .main {
+    width: 1023px;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 450px;
+  }
+  .navBar {
+    width: 1023px;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBarContent {
+    display: flex;
+    width: 780px;
+  }
+  .navBar p {
+    margin-left: 40px;
+  }
+  #navBarCart {
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+
+  #selection {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 100px;
+    margin-left: 410px;
+  }
+  #productContainer {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    margin-left: 220px;
+  }
+  .socialMediaIcons {
+    margin-left: 0px;
+  }
+
+  #logoutPopup {
+    position: absolute;
+    left: 0px;
+    margin-left: 750px;
+    margin-top: -15px;
+  }
+}
+
+/* Mobile View max 767px */
+@media screen and (max-width: 767px) {
+  .main {
+    width: 767px;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 350px;
+  }
+  .navBar {
+    width: 767px;
+  }
+  .navBarContent {
+    width: 767px;
+    display: flex;
+  }
+
+  #productContainer {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .productItem {
+    width: 280px !important;
+  }
+  #mainLogo {
+    margin-left: 10px;
+  }
+  .navBar p {
+    margin-left: 25px;
+  }
+  #navBarCart {
+    margin-left: 25px;
+  }
+  #selection {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    left: 0px;
+    right: 0px;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  #logoutPopup {
+    margin-left: 650px;
+  }
+}
+
+/* Mobile View max 480px */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 300px;
+  }
+
+  .fields {
+    width: 310px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .button {
+    width: 320px;
+  }
+
+  .link {
+    margin-left: 280px;
+  }
+
+  .links {
+    margin-left: 150px;
+  }
+  #mobOptionsIcon {
+    display: block;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  #mainLogo {
+    margin-top: -50px;
+    margin-left: 200px;
+  }
+  #mobViewNavBar {
+    display: none;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 480px;
+    height: auto;
+    text-align: center;
+  }
+  #mobViewNavBar hr {
+    color: #44bcee;
+    height: 3px;
+  }
+  #mobViewNavBar p {
+    margin-top: 15px;
+    font-family: "Raleway";
+    color: black;
+  }
+  #selection {
+    position: absolute;
+    width: 220px;
+    margin-top: 90px;
+    left: 0px;
+    margin-left: 130px;
+  }
+
+  .main {
+    width: 480px;
+  }
+  #productContainer {
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+  }
+  .productItem {
+    width: 310px !important;
+  }
+  .navBar {
+    width: 480px;
+  }
+  .navBarContent {
+    display: none;
+  }
+  .socialMediaIcons {
+    display: none;
+  }
+  .socialMediaIconsMob {
+    width: 35px;
+    display: flex;
+    margin-left: 180px;
+    margin-bottom: 10px;
+  }
 }

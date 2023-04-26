@@ -1,0 +1,501 @@
+p {
+  font-family: "Raleway";
+}
+#loadingSpinner {
+  width: 100px;
+  height: 100px;
+  margin-top: 300px;
+  margin-left: 900px;
+}
+
+.deleteConfirmation {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  width: 500px;
+  margin-left: 700px;
+  display: none;
+  position: fixed;
+  background-color: white;
+}
+
+.deleteConfirmation p {
+  margin-top: 10px;
+  font-size: 25px;
+}
+.deleteConfirmation button {
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+  width: 60px;
+}
+#yesBtn {
+  float: right;
+  margin-right: 10px;
+  border: solid #44bcee;
+}
+/* #yesBtn:hover {
+  background-color: white;
+  border: solid #44bcee;
+  color: #44bcee;
+} */
+#noBtn {
+  margin-left: 300px;
+  background-color: white;
+  border: solid #44bcee;
+  color: #44bcee;
+}
+#noBtn:hover {
+  background-color: #44bcee;
+  color: white;
+}
+.deleteSuccess {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  width: 500px;
+  margin-left: 700px;
+  display: none;
+  position: fixed;
+  background-color: white;
+}
+.deleteSuccess button {
+  border-radius: 8px;
+  border: 0;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  height: 35px;
+  width: 70px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}
+.deleteSuccess p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#itemDetails {
+  width: 1200px;
+
+  margin-top: 20px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+
+  /* margin: auto; */
+}
+
+.itemDetailsImg {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  width: 500px;
+  height: 550px;
+
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.itemallDetails {
+  width: 600px;
+}
+
+#titleDetails {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 1px;
+  color: #44bcee;
+}
+
+#descriptionDetails {
+  font-size: 20px;
+  margin-top: 50px;
+  color: grey;
+  text-align: justify;
+}
+#priceDetails {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+#cartBtn {
+  border-radius: 8px;
+  border: 0;
+  float: right;
+  margin-top: -54px;
+  margin-bottom: 20px;
+  height: 55px;
+  width: 340px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}
+#addItem {
+  border: none;
+  /* border: 1px solid #e6e6e6; */
+  /* margin-top: 5px; */
+  height: 45px;
+  width: 100px;
+  font-family: "Raleway";
+  font-size: 40px;
+  margin-left: 60px;
+  padding: 0px;
+  outline: none;
+  padding-left: 30px;
+}
+#formContainer {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+  height: 55px;
+  width: 250px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  padding-left: 10px;
+}
+#minusSign {
+  margin-right: 80px;
+  margin-top: -60px;
+}
+#plusSign {
+  margin-left: 80px;
+  margin-top: -60px;
+}
+
+#optionBtn {
+  height: 25px;
+
+  float: right;
+  margin-top: 35px;
+  cursor: pointer;
+}
+#optionSection {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  float: right;
+  margin-top: 60px;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  font-family: "Raleway";
+  display: none;
+  z-index: 1;
+}
+#optionSection button {
+  width: 150px;
+  height: 40px;
+  letter-spacing: 2px;
+  background-color: white;
+  border: none;
+}
+#optionSection button:hover {
+  background-color: #44bcee;
+}
+
+/* // Similar Products// */
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  margin-top: 50px;
+  height: 550px;
+  border-radius: 8px;
+  padding: 20px;
+}
+#productContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 1400px;
+  margin-top: 20px;
+  height: auto;
+}
+.productItem {
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 240px !important;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 330px;
+  padding: 5px;
+}
+
+.productItem a {
+  text-decoration: none;
+  text-align: center;
+}
+.productItem a:hover {
+  opacity: 0.5;
+}
+#titleContainer {
+  text-align: center;
+  /* margin-left: 25px; */
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-family: "Raleway";
+  font-weight: 600;
+  color: #44bcee;
+}
+#priceContainer {
+  margin-top: 0px;
+  color: grey;
+}
+#imageContainer {
+  text-align: center;
+  height: 200px;
+}
+
+#imageContainer img {
+  margin-top: 25px;
+  width: 90%;
+  height: 200px;
+  /* margin-left: 20px; */
+}
+
+/* .titleContainer{
+
+} */
+
+.container img {
+  width: 150px;
+
+  margin-bottom: 40px;
+}
+
+#similarProducts {
+  width: 1400px;
+  margin-left: 340px;
+}
+#similarProductsHeader {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 1px;
+  color: #44bcee;
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 1200px;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 600px;
+  }
+  #itemDetails {
+    width: 1200px;
+    display: block;
+  }
+  .itemallDetails {
+    margin-top: 20px;
+    width: 1023px;
+    padding-left: 100px;
+    display: block;
+    /* padding-right: 100px; */
+  }
+  .itemDetailsImg {
+    margin-left: 300px;
+  }
+  #similarProducts {
+    display: flex;
+    margin-left: 0px;
+    width: 1200px;
+    justify-content: left;
+    align-items: center;
+    margin-left: 80px;
+  }
+  #similarProductsHeader {
+    margin-left: left;
+  }
+  .deleteConfirmation {
+    margin-left: 300px;
+  }
+  .deleteSuccess {
+    margin-left: 300px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .main {
+    width: 1023px;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 450px;
+  }
+  #itemDetails {
+    width: 1023px;
+    display: block;
+  }
+  .itemallDetails {
+    float: none;
+    margin-top: 20px;
+    width: 1023px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .itemDetailsImg {
+    margin-left: 250px;
+  }
+  #similarProducts {
+    display: flex;
+    margin-left: 0px;
+    width: 1023px;
+    justify-content: left;
+    align-items: center;
+    margin-left: 80px;
+  }
+  #similarProductsHeader {
+    text-align: left;
+  }
+  .deleteConfirmation {
+    margin-left: 250px;
+  }
+  .deleteSuccess {
+    margin-left: 250px;
+  }
+}
+/* Mobile View*/
+@media screen and (max-width: 767px) {
+  .main {
+    width: 767px;
+    display: block;
+  }
+  #loadingSpinner {
+    width: 100px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 350px;
+  }
+  #itemDetails {
+    width: 767px;
+    display: block;
+  }
+  .itemallDetails {
+    float: none;
+    margin-top: 20px;
+    width: 767px;
+    margin-right: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+  }
+  .itemDetailsImg {
+    margin-left: 150px;
+    width: 450px;
+    height: 450px;
+  }
+  #cartBtn {
+    float: right;
+    width: 250px;
+    margin-top: -55px;
+    margin-right: 100px;
+  }
+
+  #similarProducts {
+    display: flex;
+    flex-direction: row;
+    width: 767px;
+    margin-left: 0px;
+    padding-left: 120px;
+    justify-content: left;
+    align-items: center;
+  }
+  #similarProductsHeader {
+    text-align: left;
+  }
+  .deleteConfirmation {
+    margin-left: 120px;
+  }
+  .deleteSuccess {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    width: 480px;
+  }
+  #itemDetails {
+    width: 480px;
+  }
+  .itemallDetails {
+    float: none;
+    margin-top: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    padding-right: 20px;
+
+    width: 450px;
+  }
+  .itemDetailsImg {
+    margin-left: 10px;
+
+    margin-left: 60px;
+    height: 350px;
+    width: 350px;
+  }
+  #formContainer {
+    margin-left: 80px;
+  }
+  #cartBtn {
+    float: none;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 80px;
+  }
+
+  #similarProducts {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+  #similarProductsHeader {
+    text-align: center;
+  }
+  .productItem {
+    width: 310px !important;
+    height: auto;
+  }
+  .deleteConfirmation {
+    margin-left: 10px;
+    width: 450px;
+  }
+  .deleteSuccess {
+    margin-left: 15px;
+    width: 450px;
+  }
+}

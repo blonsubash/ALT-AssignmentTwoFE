@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./Images/FakeStore.svg">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <title>Login</title>
 </head>
@@ -14,24 +15,20 @@
         
         <img src="./Images/profile blue.png" alt="login">
         <form name ="loginForm" class="form" id="errorLoginForm">
-           
-            <input type="text" class="fields" placeholder="Username" name="username" id="usernameBox"><br>
-            <span id="errorUsernameLogin"></span>
-            
-            <input type="text" class="fields" placeholder="Password" name="password" id="passwordBox" ><br>
-            <span id="errorPasswordLogin"></span>
-            
-          
-              
-                <button   id="loginBtn" class="button"> LOGIN</button>
-
-            
-            
-
-        </form>
-       
+            <div class="form-group">
+                <input type="text" class="fields" placeholder="Username" name="username" id="usernameBox"><br>
+                <span id="errorUsernameLogin"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="fields" placeholder="Password" name="password" id="passwordBox" >
+                <img src="./Images/Opeeen.svg" id="openEyeIcon">
+                <img src="./Images/eyeclose.svg" id="closeEyeIcon">
+                <br>
+                <span id="errorPasswordLogin"></span>
+            </div>
+            <button   id="loginBtn" class="button"> LOGIN</button>
+        </form> 
         <a class="links" href="./registrationpage.html">Register New Account</a>
-   
     </div>
 </div>
 <script src="./script.js"></script>

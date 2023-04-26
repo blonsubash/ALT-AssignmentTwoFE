@@ -1,0 +1,135 @@
+#homepage-heading {
+  margin-top: 120px;
+  margin-left: 30px;
+
+  color: #44bcee;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  width: 450px;
+  margin: auto;
+}
+.addNewItem {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  padding-left: 10px;
+  text-align: center;
+}
+#newItemDescription {
+  height: 150px;
+}
+#selection {
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  padding: 0px;
+  outline: none;
+  text-align: center;
+}
+#addNewItemBtn {
+  border-radius: 8px;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 55px;
+  width: 370px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+}
+#addNewItemBtn:active {
+  box-shadow: 0 5px #15abea;
+  transform: translateY(4px);
+}
+span {
+  font-family: "Raleway";
+  margin: auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: red;
+}
+
+/* // Popup// */
+.dataUploadedPopup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 370px;
+  height: 100px;
+  /* height: 100%; */
+  /* border: 1px solid grey; */
+  font-family: "Raleway";
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+#confirmBtn {
+  border-radius: 8px;
+  border: 0;
+  float: right;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  height: 25px;
+  width: 50px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: #44bcee;
+  margin-top: -15px;
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    margin-left: 450px;
+  }
+  #homepage-heading {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .main {
+    margin-left: 320px;
+  }
+  #homepage-heading {
+    margin-left: 40px;
+  }
+}
+/* MObile View */
+@media screen and (max-width: 767px) {
+  .main {
+    margin-left: 190px;
+  }
+  #homepage-heading {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    margin-left: 50px;
+  }
+  #homepage-heading {
+    margin-left: 70px;
+  }
+}
